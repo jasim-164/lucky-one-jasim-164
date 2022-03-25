@@ -1,3 +1,7 @@
-.header{
-    background-color: aqua;
+.header img{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
 }
