@@ -51,7 +51,7 @@ const Cart = (props) => {
     //  
     return (
         <div className='cart'>
-            <h1>Cart Items</h1>
+            <h1>Cart Items:</h1>
             <div className='cart-empty'>{cart.length===0 &&<h5 >Your cart is empty</h5>}</div>
             {cart.map((item) =>(
                 <div className='col' key={item.id}>
@@ -59,7 +59,7 @@ const Cart = (props) => {
                 <img src={item.img} alt='item' height='150' width='150'></img>
                 </div>
                 <div>{item.name}</div>
-                
+
                 <div> <button className='btn' onClick={() => handleRemove(item)}>Remove One</button></div>
                 </div>
                 
@@ -68,11 +68,17 @@ const Cart = (props) => {
              
             <div>
             <h1>Random Choose:</h1>
+            <div>{products.length!==0 &&
             <div>
             <img src={products.img} alt='item' height='150' width='150'></img>
-            </div>
             <div>{products.name}</div>
             </div>
+             }
+            </div>
+            
+
+            </div>
+           
 
             <div> <button className='btn' onClick={() => randomChoose(cart.length)}>Random Choose</button></div>
 
