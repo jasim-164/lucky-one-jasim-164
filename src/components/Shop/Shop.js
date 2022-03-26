@@ -39,9 +39,6 @@ const Shop = () => {
         console.log('Removing all');
         setCart([]);
     }
-    const randomChoose=()=>{
-        
-    }
 
     return (
         <div className='shop-container'>
@@ -56,7 +53,7 @@ const Shop = () => {
             </div>
     
             <div className="cart-container">
-            <Cart cart={cart} handleRemove={handleRemove}  handleRemoveAll={handleRemoveAll} randomChoose={randomChoose} ></Cart>
+            <Cart cart={cart} handleRemove={handleRemove}  handleRemoveAll={handleRemoveAll}  ></Cart>
             </div>
         </div>
     );
