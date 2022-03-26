@@ -28,6 +28,20 @@ const Shop = () => {
         
         setCart(newCart);
     }
+    const handleRemove=(selectedProduct)=> {
+        console.log('Removing')
+        const exist= cart.find((product) =>product.id ===selectedProduct.id );
+        if(exist){
+            setCart(cart.filter((x)=>x.id !== selectedProduct.id))
+        }
+    }
+    const handleRemoveAll=(cart)=>{
+        console.log('Removing all');
+        setCart([]);
+    }
+    const randomChoose=()=>{
+        
+    }
 
     return (
         <div className='shop-container'>
@@ -42,7 +56,7 @@ const Shop = () => {
             </div>
     
             <div className="cart-container">
-            <Cart cart={cart}></Cart>
+            <Cart cart={cart} handleRemove={handleRemove}  handleRemoveAll={handleRemoveAll} randomChoose={randomChoose} ></Cart>
             </div>
         </div>
     );
